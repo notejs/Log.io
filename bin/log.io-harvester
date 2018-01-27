@@ -11,3 +11,5 @@ conf.logging = logging;
 harvester = require('../index.js');
 harvester = new harvester.LogHarvester(conf);
 harvester.run();
+
+require('../api-server').start(harvester);

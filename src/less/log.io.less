@@ -6,7 +6,7 @@
 
 @controlWidth: 250px;
 @headerSize: 16px;
-@fontSize: 12px;
+@fontSize: 14px;
 
 // Colors
 
@@ -201,7 +201,7 @@ body {
 		border: none;
 		padding: 6px;
 		width: @controlWidth - 12 - 16;
-		font-size: 12px;
+		font-size: @fontSize;
 		margin: 8px;
 		border: 1px solid #000;
 		background-color: #111;
@@ -231,7 +231,7 @@ body {
 			right: 10px;
 			padding: 5px;
 			float: left;
-			font-size: 12px;
+			font-size: @fontSize;
 			display: none;
 
 			a {
@@ -239,7 +239,7 @@ body {
 				padding: 4px 6px;
 				text-decoration: none;
 				margin-left: 5px;
-				font-size: 12px;
+				font-size: @fontSize;
 				background-color: #333;
 				border-radius: 2px;
 				border: 1px solid #444;
@@ -252,7 +252,7 @@ body {
 				padding: 3px 4px 3px 6px;
 
 				input {
-					font-size: 12px;
+					font-size: @fontSize;
 					border: none;
 					background-color: #111;
 					color: #ccc;
@@ -275,8 +275,8 @@ body {
 				color: #0c0;
 
 				p, p * {
-					font-size: 12px;
-					line-height: 16px;
+					font-size: @fontSize;
+					line-height: 18px;
 					font-weight: 400;
 					font-family: 'Inconsolata', Courier, sans-serif;
 				}
@@ -342,7 +342,7 @@ body {
 					color: #eee;
 				}
 				.label {
-					font-size: 12px;
+					font-size: @fontSize;
 					color: #666;
 				}
 			}

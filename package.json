@@ -33,6 +33,7 @@
   },
   "scripts": {
     "prepublish": "cake build",
+    "build": "cake build",
     "postinstall": "cake ensure:configuration"
   }
 }

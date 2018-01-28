@@ -1,77 +1,63 @@
-Log.io - Real-time log monitoring in your browser
-=================================================
+# browser.log.io - Real-time log in your browser 
 
-Powered by [node.js](http://nodejs.org) + [socket.io](http://socket.io)
+you can send a log to browser.log.io server via HTTP.
+
+Powered by [node.js](http://nodejs.org) + [socket.io](http://socket.io) + [Express](http://expressjs.com/)
 
 ## How does it work?
 
-*Harvesters* watch log files for changes, send new log messages to the *server* via TCP, which broadcasts to *web clients* via socket.io.
-
-Log streams are defined by mapping file paths to a stream name in harvester configuration.
+*Harvester* receives the log via HTTP（usually comes from a browser or webview）, send new log messages to the *server* via TCP, which broadcasts to *web clients* via socket.io.
 
 Users browse streams and nodes in the web UI, and activate (stream, node) pairs to view and search log messages in screen widgets.
 
-## Install Server & Harvester
+## preview
+
+![](./images/screen.png)
+
+## Usage
 
 1) Install via npm
-
-    npm install -g log.io --user "ubuntu"
+    
+    ```bash
+    $ npm install -g browser.log.io
+    ```
 
 2) Run server
 
-    log.io-server
-
-3) Configure harvester
-
-    nano ~/.log.io/harvester.conf
+    ```bash
+    $ browser.log.io-server
+    ```
 
 4) Run harvester
 
-    log.io-harvester
+    ```bash
+    $ browser.log.io-harvester
+    ```
 
-5) Browse to http://localhost:28778
+5) Browse to [http://localhost:28778](http://localhost:28778)
 
-## Server TCP Interface
+6) Send msg to port 8008
 
-Harvesters connect to the server via TCP, and write properly formatted strings to the socket.  Third party harvesters can send messages to the server using the following commands:
+    ```javascript
+    var data = {
+        msg: JSON.stringify({data:[{name:'jake'},{name:'young'}]})
+    };
+    
+    jsonp({
+        url: 'http://harvester-ip:8008/log',
+        data: data
+    })
+    ```
 
-Send a log message
+7) happy
 
-    +log|my_stream|my_node|info|this is log message\r\n
+## roadmap
 
-Register a new node
-
-    +node|my_node\r\n
-
-Register a new node, with stream associations
-
-    +node|my_node|my_stream1,my_stream2\r\n
-
-Remove a node
-
-    -node|my_node\r\n
-
-## Credits
-
-- Mike Smathers &lt;msmathers@narrativescience.com&gt; ([msmathers](http://github.com/msmathers))
-
-- Narrative Science http://narrativescience.com ([NarrativeScience](http://github.com/NarrativeScience))
-
-## Acknowledgements
-
-- Jeremy Ashkenas ([jashkenas](https://github.com/jashkenas))
-
-- Guillermo Rauch &lt;guillermo@learnboost.com&gt; ([Guille](http://github.com/guille))
-
-- Ryan Dahl &lt;ry at tiny clouds dot org&gt; ([ry](https://github.com/ry)) + Joyent http://www.joyent.com/ ([joyent](https://github.com/joyent/))
-
-- [turtlebender](http://github.com/turtlebender)
-
-- [jdrake](http://github.com/jdrake)
+第一步先完成基本功能，实现不一定是合理的，之后再视情况来优化和完善以及新增功能。
 
 ## License 
 
-Copyright 2013 Narrative Science &lt;contrib@narrativescience.com&gt;
+Copyright 2013 Linus Wang &lt;linus.wang.i77@gmail.com&gt;
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

@@ -1,12 +1,12 @@
 {
-  "name": "log.io",
-  "description": "Realtime log monitoring in your browser",
-  "version": "0.3.4",
-  "homepage": "http://logio.org",
+  "name": "browser.log.io",
+  "description": "Realtime log in your browser",
+  "version": "1.0.0",
+  "homepage": "http://github.com/notejs/log.io",
   "keywords": ["logs", "monitoring", "realtime", "socket.io", "node.js", "ajax"],
-  "author": "Mike Smathers <msmathers@narrativescience.com>",
+  "author": "Linus Wang <linus.wang.i77@gmail.com>",
   "contributors": [
-    { "name": "Mike Smathers", "email": "msmathers@narrativescience.com" }
+    { "name": "Linus Wang", "email": "linus.wang.i77@gmail.com" }
   ],
   "dependencies": {
     "backbone": "~0.9.10",
@@ -28,8 +28,8 @@
     "sinon": "~1.5.2"
   },
   "bin" : {
-    "log.io-server": "./bin/log.io-server",
-    "log.io-harvester": "./bin/log.io-harvester"
+    "browser.log.io-server": "./bin/browser.log.io-server",
+    "browser.log.io-harvester": "./bin/browser.log.io-harvester"
   },
   "scripts": {
     "prepublish": "cake build",

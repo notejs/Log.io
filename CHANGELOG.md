@@ -1,3 +1,12 @@
+# 1.0.0 / 2018.01.28
+
+- support receive msg from browser via HTTP;
+
+
+
+Log.io changelog by Narrative Science
+--- 
+
 # 0.3.4 / 2014-07-30
 
 - Addresses harvester connection durability, fixes #70, #85, #114, #120

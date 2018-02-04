@@ -4,6 +4,7 @@ var app = express();
 module.exports.start = function(harvester) {
 
   app.get('/log', function(req, res){
+    var callback = req.query.callback;
     var msg = req.query.msg;
     
     if (msg) {
@@ -13,8 +14,12 @@ module.exports.start = function(harvester) {
       harvester._send('+bind', 'node', remoteAddress);
       harvester._send('+log', 'device', remoteAddress, 'info', msg);
     }
-    
-    res.send('ok');
+
+    if (callback) {
+      res.send(callback + '({"success": true})');
+    } else {
+      res.send('{"success": true}');
+    }
   });
   
   app.listen(8008);

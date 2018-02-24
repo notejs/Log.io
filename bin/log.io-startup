@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+require('./log.io-server');
+require('./log.io-harvester');

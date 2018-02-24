@@ -1,6 +1,6 @@
-# browser.log.io - Real-time log in your browser 
+# log.io - Real-time log in your browser 
 
-you can send a log to browser.log.io server via HTTP.
+you can send a log to log.io server via HTTP.
 
 Powered by [node.js](http://nodejs.org) + [socket.io](http://socket.io) + [Express](http://expressjs.com/)
 
@@ -12,31 +12,25 @@ Users browse streams and nodes in the web UI, and activate (stream, node) pairs 
 
 ## preview
 
-![](./images/screen.png)
+![](https://notejs.github.io/screen.png)
 
 ## Usage
 
 1) Install via npm
     
     ```bash
-    $ npm install -g browser.log.io
+    $ npm install -g @yfe/log.io
     ```
 
-2) Run server
+2) Run server 
 
     ```bash
-    $ browser.log.io-server
+    $ log.io-startup
     ```
 
-4) Run harvester
+3) Browse to [http://localhost:28778](http://localhost:28778)
 
-    ```bash
-    $ browser.log.io-harvester
-    ```
-
-5) Browse to [http://localhost:28778](http://localhost:28778)
-
-6) Send msg to port 8008
+4) Send msg to port 8008
 
     ```javascript
     var data = {
@@ -49,7 +43,7 @@ Users browse streams and nodes in the web UI, and activate (stream, node) pairs 
     })
     ```
 
-7) happy
+5) happy
 
 ## roadmap
 

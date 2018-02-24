@@ -1,7 +1,11 @@
+# 1.0.0 / 2018.02.24
+
+- rename to @yfe/log.io
+- merge start server and start harvester
+
 # 1.0.0 / 2018.01.28
 
 - support receive msg from browser via HTTP;
-
 
 
 Log.io changelog by Narrative Science

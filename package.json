@@ -1,7 +1,7 @@
 {
-  "name": "log.io",
+  "name": "@yfe/log.io",
   "description": "Realtime log in your browser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "http://github.com/notejs/log.io",
   "keywords": ["logs", "monitoring", "realtime", "socket.io", "node.js", "ajax"],
   "author": "Linus Wang <linus.wang.i77@gmail.com>",
@@ -28,7 +28,7 @@
     "sinon": "~1.5.2"
   },
   "bin" : {
-    "startup": "./bin/log.io-startup",
+    "log.io-startup": "./bin/log.io-startup",
     "log.io-server": "./bin/log.io-server",
     "log.io-harvester": "./bin/log.io-harvester"
   },

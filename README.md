@@ -30,7 +30,7 @@ Users browse streams and nodes in the web UI, and activate (stream, node) pairs 
 
 3) Browse to [http://localhost:28778](http://localhost:28778)
 
-4) Send msg to port 8008
+4) Send msg to port 8008. (You can use [@yfe/log](https://github.com/notejs/log) in browser)
 
     ```javascript
     var data = {
